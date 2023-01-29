@@ -1,0 +1,86 @@
+object FrmTelaPedidos: TFrmTelaPedidos
+  Left = 0
+  Top = 0
+  Caption = 'Tela de Pedidos'
+  ClientHeight = 511
+  ClientWidth = 778
+  Color = clWhite
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  WindowState = wsMaximized
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 778
+    Height = 331
+    Align = alClient
+    TabOrder = 0
+    ExplicitWidth = 705
+    ExplicitHeight = 281
+    object grid: TDBGrid
+      Left = 1
+      Top = 1
+      Width = 776
+      Height = 329
+      Align = alClient
+      DataSource = DataModule1.ConDetPedProducao
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -53
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -53
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      OnCellClick = gridCellClick
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Top = 331
+    Width = 778
+    Height = 180
+    Align = alBottom
+    TabOrder = 1
+    ExplicitTop = 281
+    ExplicitWidth = 705
+    object gridFinalizados: TDBGrid
+      Left = 1
+      Top = 1
+      Width = 776
+      Height = 178
+      Align = alClient
+      DataSource = DataModule1.ConDetPedFin
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -24
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -24
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+    end
+  end
+  object Timer1: TTimer
+    Interval = 30000
+    OnTimer = Timer1Timer
+    Left = 48
+    Top = 224
+  end
+end

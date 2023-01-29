@@ -1,0 +1,10 @@
+﻿[DataModule1.tb_funcionarios]
+
+[DataModule1.tb_mesas]
+Visible=False
+
+[DataModule1.tb_gastos]
+Visible=False
+
+[DataModule1.tb_cargo]
+
